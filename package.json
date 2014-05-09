@@ -1,5 +1,5 @@
 {
-  "name": "pardot",
+  "name": "node-pardot",
   "version": "0.0.1",
   "description": "A node.js wrapper for the Pardot API.",
   "author": {
