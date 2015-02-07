@@ -12,8 +12,11 @@ var nodePardot = require('node-pardot');
 
 var client = new nodePardot.PardotAPI({
   userKey: user_key,
-  apiKey: api_key,
+  email: email,
+  password: password,
   DEBUG: true
+}, function() {
+   // Authentication completed
 });
 
 client.queryProspects(function (error, data){
