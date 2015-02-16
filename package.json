@@ -1,6 +1,6 @@
 {
   "name": "node-pardot",
-  "version": "0.8",
+  "version": "0.9",
   "description": "A node.js wrapper for the Pardot API.",
   "author": {
     "name": "Jeff Zabel",

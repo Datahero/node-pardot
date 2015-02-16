@@ -3,6 +3,10 @@ node-pardot
 
 A node.js library for the Pardot API
 
+Availability to create a client by using email / password and a user key.
+
+Alternatively, you can also create using just an apiKey.
+
 
 Basic Usage Follows this Pattern:
 
@@ -10,6 +14,7 @@ Basic Usage Follows this Pattern:
 
 var nodePardot = require('node-pardot');
 
+// Create client using email, password and user_key
 var client = new nodePardot.PardotAPI({
   userKey: user_key,
   email: email,
@@ -17,6 +22,13 @@ var client = new nodePardot.PardotAPI({
   DEBUG: true
 }, function() {
    // Authentication completed
+});
+
+// Alternative using Only API Key
+var client = new nodePardot.PardotAPI({
+  apiKey: api_key
+}, function() {
+  // Authentication complete
 });
 
 client.queryProspects(function (error, data){
@@ -33,14 +45,22 @@ client.queryProspects(function (error, data){
 
 _View code for available params. Pardot may or may not keep their params up to date._
 
-[client.queryVisitors(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L108-L120) _currently have an email out to api@pardot.com because our visitor results are coming back empty_
+[client.queryVisitors(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L138-L156) _currently have an email out to api@pardot.com because our visitor results are coming back empty_
 
 
-[client.queryCampaigns(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L128-L140)
+[client.queryCampaigns(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L164-L182)
 
-[client.queryOpportunities(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L147-L166)
+[client.createNewCampaign(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L191-L198)
 
-[client.queryProspects(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L173-L204)
+[client.queryOpportunities(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L206-L229)
+
+[client.queryProspects(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L236-L271)
+
+[client.createNewProspects(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L273-L277)
+
+[client.updateProspect(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L282-L289)
+
+[client.createOrUpdateProspect(params, cb)](https://github.com/Datahero/node-pardot/blob/master/lib/pardot/PardotAPI_v3.js#L291-L347)
 
 
 # Contributors
