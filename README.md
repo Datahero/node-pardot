@@ -15,21 +15,23 @@ Basic Usage Follows this Pattern:
 var nodePardot = require('node-pardot');
 
 // Create client using email, password and user_key
-var client = new nodePardot.PardotAPI({
+nodePardot.PardotAPI({
   userKey: user_key,
   email: email,
   password: password,
   DEBUG: true
-}, function() {
+}, function(err, client) {
    // Authentication completed
+   
 });
 
 // Alternative using Only API Key
-var client = new nodePardot.PardotAPI({
+nodePardot.PardotAPI({
   apiKey: api_key
-}, function() {
+}, function(err, client) {
   // Authentication complete
 });
+
 
 client.queryProspects(function (error, data){
   if(error) {
