@@ -1,6 +1,6 @@
 {
   "name": "node-pardot",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A node.js wrapper for the Pardot API.",
   "author": {
     "name": "Jeff Zabel",
@@ -14,6 +14,7 @@
     "url": "https://github.com/Datahero/node-pardot.git"
   },
   "dependencies": {
-    "request": "2.x.x"
+    "request": "2.x.x",
+    "underscore": "1.8.3"
   }
 }
