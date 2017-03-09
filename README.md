@@ -69,5 +69,6 @@ _View code for available params. Pardot may or may not keep their params up to d
 
 - [Jeff Zabel](http://github.com/jzabel)
 - [Blair Anderson](http://github.com/blairanderson)
+- [Wyatt Benno](http://github.com/wyattbenno777)
 
 # [MIT License](https://github.com/Datahero/node-pardot/blob/master/LICENSE)
